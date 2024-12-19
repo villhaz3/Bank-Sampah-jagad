@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Peminjaman</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+            background-image: url(/asset/backgroun.jpg);
+            background-size: cover;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 600px;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            text-align: left;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #f4f4f4;
+            font-weight: bold;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #1a54c0;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 10px;
+            text-decoration: none;
+            text-align: center;
+            margin: 5px 0;
+            font-weight: 600;
+        }
+        .btn-edit {
+            background-color: #ffa500;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- untuk detail peminjam dan di ambimdata dari orang yang memasukan data di formulir -->
+    <div class="container">
+        <h2>Detail Peminjaman</h2>
+        <table>
+            <tr>
+                <th>Nama Lengkap</th>
+                <td id="nama"></td>
+            </tr>
+            <tr>
+                <th>Alamat</th>
+                <td id="alamat"></td>
+            </tr>
+            <tr>
+                <th>NIK</th>
+                <td id="nik"></td>
+            </tr>
+            <tr>
+                <th>Nomor Telepon</th>
+                <td id="telp"></td>
+            </tr>
+            <tr>
+                <th>Tanggal Lahir</th>
+                <td id="tgl_lahir"></td>
+            </tr>
+            <tr>
+                <th>Tanggal Peminjaman</th>
+                <td id="tgl_pinjam"></td>
+            </tr>
+            <tr>
+                <th>Tanggal Pengembalian</th>
+                <td id="tgl_kembali"></td>
+            </tr>
+            <tr>
+                <th>Mobil yang Dipilih</th>
+                <td id="mobil"></td>
+            </tr>
+        </table>
+        <!-- kalau di edit data yang salah akan di perbaiki oleh konsumen yang mengunjungi -->
+        <button class="btn-edit" onclick="editData()">Edit Data</button>
+        <br><br>
+        <!-- kalau di kli masuk ke website selanjutnya atau sebelumnya -->
+        <a href="pembayaran.html" class="btn">Ajukan Peminjaman</a><br>
+        <a href="formulir.html" class="btn">Kembali Halaman Sebelumnya</a><br>
+        <a href="../uuk.html" class="btn">Home</a>
+    </div>
+
+    <script>
+        // Fungsi untuk menampilkan data dari localStorage
+        function displayData() {
+            document.getElementById('nama').textContent = localStorage.getItem('nama') || '';
+            document.getElementById('alamat').textContent = localStorage.getItem('alamat') || '';
+            document.getElementById('nik').textContent = localStorage.getItem('nik') || '';
+            document.getElementById('telp').textContent = localStorage.getItem('telp') || '';
+            document.getElementById('tgl_lahir').textContent = localStorage.getItem('tgl_lahir') || '';
+            document.getElementById('tgl_pinjam').textContent = localStorage.getItem('tgl_pinjam') || '';
+            document.getElementById('tgl_kembali').textContent = localStorage.getItem('tgl_kembali') || '';
+            document.getElementById('mobil').textContent = localStorage.getItem('mobil') || '';
+        }
+
+        // Fungsi untuk edit data
+        function editData() {
+            const nama = prompt('Edit Nama:', localStorage.getItem('nama'));
+            const alamat = prompt('Edit Alamat:', localStorage.getItem('alamat'));
+            const nik = prompt('Edit NIK:', localStorage.getItem('nik'));
+            const telp = prompt('Edit Nomor Telepon:', localStorage.getItem('telp'));
+            const tgl_lahir = prompt('Edit Tanggal Lahir:', localStorage.getItem('tgl_lahir'));
+            const tgl_pinjam = prompt('Edit Tanggal Peminjaman:', localStorage.getItem('tgl_pinjam'));
+            const tgl_kembali = prompt('Edit Tanggal Pengembalian:', localStorage.getItem('tgl_kembali'));
+            const mobil = prompt('Edit Mobil yang Dipilih:', localStorage.getItem('mobil'));
+
+            if (nama && alamat && nik && telp && tgl_lahir && tgl_pinjam && tgl_kembali && mobil) {
+                localStorage.setItem('nama', nama);
+                localStorage.setItem('alamat', alamat);
+                localStorage.setItem('nik', nik);
+                localStorage.setItem('telp', telp);
+                localStorage.setItem('tgl_lahir', tgl_lahir);
+                localStorage.setItem('tgl_pinjam', tgl_pinjam);
+                localStorage.setItem('tgl_kembali', tgl_kembali);
+                localStorage.setItem('mobil', mobil);
+                displayData();
+                alert('Data berhasil diperbarui!');
+            } else {
+                alert('Semua data harus diisi!');
+            }
+        }
+
+        // Menampilkan data saat halaman dimuat
+        displayData();
+    </script>
+</body>
+</html>

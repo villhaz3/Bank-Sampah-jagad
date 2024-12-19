@@ -1,0 +1,454 @@
+
+body {
+    background-color: #77DD77; 
+    color: #333333;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+.navbar{
+    background: #212121;
+    /* background-color: #AEC6CF;  */
+    margin: 0;
+    padding: 20px 30px;
+}
+
+.logo{
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu{
+    margin: 0;
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.menu li{
+    padding-left: 0;
+    margin-right: 10px;
+}
+
+.menu li a{
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.tombol{
+    display: none;
+    color: white;
+    font-size: 14pt;
+}
+
+.tombol:hover{
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .menu{
+        display: none;
+    }
+
+    .tombol{
+        display: block;
+    }
+
+    .menu.aktif{
+        display: inline-block;
+        position: absolute;
+        top: 64px;
+        background: #212121;
+        padding: 10px 20px;
+        right: 0;
+        left: 0;
+        z-index: 2;
+    }
+
+    .menu.aktif li a{
+        padding: 10px;
+        display: inline-block;
+    }
+}
+
+.btn-primary{
+     background: #1ac03e;
+     color: white;
+     padding: 10px 20px;
+     border-radius: 10px;
+     box-shadow: none;
+     border: none;
+     text-decoration: none;
+}
+
+.btn-primary:hover{
+    background: #11367c;
+}
+
+.btn-primary:active{
+    background: #2e58a7;
+}
+
+.welcome-section{
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('aset/bgHome.jpeg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.welcome-section::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.welcome-text{
+    position: relative;
+    color: white;
+    z-index: 1;
+    text-align: center;
+    
+}
+
+.welcome-text h1{
+    font-size: 3rem;
+    letter-spacing: 2px;
+}
+/* .tentang-section::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+} */
+.tentang-section{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px;
+    /* background-color: #212121; */
+    height: 500px;
+    left: 0;
+    top: 0;
+    content: "";
+    /* position: absolute; */
+    background-color: rgba(0, 0, 0, 0.5);
+
+    
+}
+
+.image-container{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.image-container img{
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.text-container{
+    flex: 1;
+    padding: 20px;
+    margin-left: 30px;
+    text-align: justify;
+    color: black;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.text-container h2{
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.text-container p{
+    font-size: 1.2rem;
+    line-height: 1.6;
+    text-align: center;
+
+}
+
+.Jenissampah-section{
+    padding: 50px;
+    /* background-color: #212121; */
+    text-align: center;
+    content: "";
+    /* position: absolute; */
+    top: 0;
+    left: 0;
+    /* width: 100%; */
+    /* height: 100%; */
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.Jenissampah-section h2,h1{
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color:  white;
+}
+
+.Jenissampah-container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    /* background-color: #212121; */
+}
+
+.Jenissampah-card{
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.Jenissampah-card img{
+    width: 100%;
+    border-radius: 10px;
+    height: auto;
+}
+
+.Jenissampah-card h3{
+    margin-top: 15px;
+    font-size: 1.5rem;
+}
+
+.Jenissampah-card p{
+    font-size: 1rem;
+    margin-top: 10px;
+    color: #555;
+}
+
+.Jenissampah-card:hover{
+    transform: translateY(-10px);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.form-section {
+    padding: 50px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.form-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.Form-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px 50px 30px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgb(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    resize: none;
+}
+
+.btn-primary1 {
+    background: #0ddd3a;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: none;
+    border: none;
+    text-decoration: none;
+}
+
+.btn-primary:hover {
+    background: #000000;
+}
+
+.btn-primary:active {
+    background: #2e58a7;
+}
+
+.tekan {
+    text-decoration: none;
+}
+.order-section {
+        padding: 50px;
+        text-align: center;
+        
+}
+
+.order-section h2 {
+        font-size: 2.5rem;
+        margin-bottom: 30px;
+}
+
+.order-table {
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+        border-collapse: collapse;
+        background-color: white;
+}
+
+.order-table th, .order-table td {
+        padding: 15px;
+        border: 1px solid #ddd;
+        text-align: left;
+}
+
+.order-table th {
+        background-color: #11367c;
+        color: white;
+}
+
+.order-table tr:nth-child(even) {
+        background-color: #f9f9f9;
+}
+
+.order-table tr:hover {
+        background-color: #f1f1f1;
+}
+
+.order-table td {
+        font-size: 1rem;
+}
+
+.ending-text{
+        color: rgb(252, 252, 252);
+        text-align: center;
+        background-image: url(aset/bgHome.jpeg);
+        border: none;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 500px;
+        padding: 100px;
+        /* background-color: rgba(0, 0, 0, 0.5); */
+        
+}
+
+.contact-section {
+        padding: 50px;
+        background-image: url("asset/backgroun.jpg");
+        text-align: center;
+}
+.contact-section h2 {
+        font-size: 2.5rem;
+        margin-bottom: 40px;
+}
+.contact-form {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: white;
+        padding: 30px 50px 30px 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgb(0, 0, 0, 0.1);
+}
+.form-group {
+        margin-bottom: 20px;
+        text-align:left;
+        color: #212121;
+}
+.form-group label {
+        display: block;
+        margin-bottom: 5px;
+        font-size: 1.1rem;
+}
+.form-group input, .form-group textarea {
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+        font-size: 1rem;
+}
+.form-group textarea {
+        resize: none;
+}
+.btn-primary-kritik{
+    background:#22c01a ;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: none;
+    border: none;
+    text-decoration: none;
+    align-items: center;
+    font-weight: 200;
+    text-align: center;
+}
+.btn-primary-kritik:hover{
+    background-color: #000000;
+}
+.btn-primary-home{
+    background: #1ac028;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 10px;
+    box-shadow: none;
+    border: none;
+    text-decoration: none;
+    align-items: center;
+    font-weight: 200;
+    text-align: center;
+}
+.container-login {
+    background-color: rgb(220, 223, 228);
+    padding: 20px;
+    margin: 20px auto;
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+   
+}

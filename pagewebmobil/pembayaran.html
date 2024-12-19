@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pembayaran</title>
+    <link rel="stylesheet" href="../styling.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="" class="logo"></a>
+            <ul class="menu">
+                <li><a href="../uuk.html">Home</a></li>
+                <li><a href="../uuk.html#tentang">Tentang</a></li>
+                <li><a href="../uuk.html#produk">Produk</a></li>
+                <!-- <li><a href="page/formulir.html">Formulir</a></li> -->
+                <!-- <li><a href="page/kontak_kami.html">Kontak Kami</a></li> -->
+            </ul>
+            <div class="tombol">&#9776;</div>
+        </div>
+        </nav>
+    <section class="order-section" id="order">
+        <h2>Pembayaran</h2>
+        <table class="order-table">
+            <thead>
+              <tr>
+                <th>No</th>
+                <th>Nama Mobil</th>
+                <th>Dipinjam selama</th>
+                <th>Harga</th>
+                <th>Pembayaran</th>
+              </tr>  
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Bmw M4</td>
+                    <td>24 jam</td>
+                    <td>Rp.20.000.000</td>
+                    <td><a href="selamat.html" class="btn-primary">Bayar</a></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Audi R8</td>
+                    <td>24 jam</td>
+                    <td>Rp.15.000.000</td>
+                    <td><a href="selamat.html" class="btn-primary">Bayar</a></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Porsche 991 GT3</td>
+                    <td>24 jam</td>
+                    <td>Rp.25.600.000</td>
+                    <td><a href="selamat.html" class="btn-primary">Bayar</a></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Nissan GT-R</td>
+                    <td>24 jam</td>
+                    <td>Rp.22.000.000</td>
+                    <td><a href="selamat.html" class="btn-primary">Bayar</a></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>mercendes amg gt 4</td>
+                    <td>24 jam</td>
+                    <td>Rp.30.200.000</td>
+                    <td><a href="selamat.html" class="btn-primary">Bayar</a></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>lamborghini huracan sto</td>
+                    <td>24 jam</td>
+                    <td>Rp.30.500.000</td>
+                    <td><a href="selamat.html" class="btn-primary">Bayar</a></td>
+                </tr>
+            </tbody>
+        </table>
+      </section>
+      <script type="text/javascript">
+        const tombol = document.querySelector(".tombol");
+        const menu = document.querySelector(".menu");
+    
+        tombol.addEventListener("click", () => {
+            menu.classList.toggle("aktif");
+        });
+      </script> 
+</body>
+</html>

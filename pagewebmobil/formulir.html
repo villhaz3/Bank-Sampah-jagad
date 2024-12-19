@@ -1,0 +1,512 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Peminjaman </title>
+    <style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+
+    body { 
+
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 700px;
+    background-image: url(../asset/backgroun.jpg);
+    margin-top: 90px;
+    }
+
+    .container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    }
+
+    h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    font-size: larger;
+    
+
+    }
+
+    form {
+    display: flex;
+    flex-direction: column;
+    }
+
+    label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="tel"],
+    input[type="date"],
+    select {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    }
+  
+    input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #1a54c0;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    }
+   
+    .btn-primary-peminjaman{
+        background:#1a54c0 ;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 10px;
+        box-shadow: none;
+        border: none;
+        text-decoration: none;
+        align-items: center;
+        font-weight: 200;
+        text-align: center;
+
+    }
+    .btn-primary-home{
+    background: #1a54c0;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: none;
+    border: none;
+    text-decoration: none;
+    align-items: center;
+    font-weight: 200;
+    text-align: center;
+
+}
+
+ </style>
+
+
+</head>
+<body >
+  
+
+    <div class="container">
+        <h2 >Formulir Peminjaman </h2>
+        
+        <form action="/submit" method="POST">
+            
+            <label for="nama">Nama Lengkap:</label>
+            <input type="text" id="nama" name="nama" placeholder="Masukkan nama Anda" required>
+
+            <label for="alamat">Alamat:</label>
+            <input type="text" id="alamat" name="alamat" placeholder="Masukkan Alamat Anda " required>
+
+      
+            <label for="nik">NIK:</label>
+            <input type="text" id="nik" name="nik" maxlength="16" placeholder="Masukkan NIK Anda" required>
+
+      
+            <label for="telp">Nomor Telepon:</label>
+            <input type="tel" id="telp" name="telp" placeholder="Masukkan nomor telepon" required>
+
+            <label for="tgl_lahir">Tanggal lahir :</label>
+            <input type="date" id="tgl_lahir" name="tgl_lahir" required>
+
+            <label for="tgl_pinjam">Tanggal Peminjaman:</label>
+            <input type="date" id="tgl_pinjam" name="tgl_pinjam" required>
+
+
+            <label for="tgl_kembali">Tanggal Pengembalian:</label>
+            <input type="date" id="tgl_kembali" name="tgl_kembali" required>
+
+            <label for="mobil">Pilih Mobil:</label>
+            <select id="mobil" name="mobil" required>
+                <option value="">-- Pilih Mobil --</option>
+                <option value="Bmw M4">Bmw M4</option>
+                <option value="AUDI R8">AUDI R8</option>
+                <option value="Porsche 991 GT3">Porsche 991 GT3</option>
+                <option value="Nissan GT-R">Nissan GT-R</option>
+                <option value="mercendes amg gt 4">mercendes amg gt 4</option>
+                <option value="lamborghini huracan sto">lamborghini huracan sto</option>
+               
+            </select>
+
+            
+            <a href="halaman_peminjam.html" class="btn-primary-home">Submit</a><br>
+
+            <a href="pembayaran.html" class="btn-primary-peminjaman">Ajukan Peminjaman</a><br>
+            <a href="..//uuk.html" class="btn-primary-home">Home</a>
+        </form>
+    </div>
+
+    <script type="text/javascript">
+        const tombol = document.querySelector(".tombol");
+        const menu = document.querySelector(".menu");
+    
+        tombol.addEventListener("click", () => {
+            menu.classList.toggle("aktif");
+        });
+    </script> 
+
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Data penjual Sampah</title>
+   
+   <style>
+          * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+
+    body { 
+
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 700px;
+    background-image: url(../asset/backgroun.jpg);
+    margin-top: 100px;
+    }
+
+    .container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    }
+    .container2{
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 750px;
+        text-align: center;
+        position: relative;
+    }
+
+    h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    font-size: larger;
+    
+
+    }
+
+    form {
+    display: flex;
+    flex-direction: column;
+    }
+
+    label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="tel"],
+    input[type="date"],
+    /* input[typr="number"], */
+    select {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    }
+    #berat{
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #acc;
+        border-radius: 5px;
+        width: 100%;
+    }
+  
+    /* input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #1a54c0;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    } */
+     button{
+        padding: 10px 20px;
+        background-color: rgb(16, 160, 59);
+        color: white;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: 16px;
+     }
+   
+    .btn-primary-peminjaman{
+        background:#1a54c0 ;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 10px;
+        box-shadow: none;
+        border: none;
+        text-decoration: none;
+        align-items: center;
+        font-weight: 200;
+        text-align: center;
+
+    }
+    .btn-primary-home{
+    background: #1a54c0;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: none;
+    border: none;
+    text-decoration: none;
+    align-items: center;
+    font-weight: 200;
+    text-align: center;
+
+}
+#data{
+    width: 90%;
+    margin: 0 auto;
+}
+#userTable{
+    width: 100%;
+    margin-top: 10px;
+    border-collapse: collapse;
+}
+#userTable th, #userTable td{
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+#userTable{
+    background-color: rgb(0, 255, 34);
+    color:white;
+    /* color: #333; */
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Formulir Data Penjual Sampah</h2>
+        
+        <form id="peminjamanForm">
+            <!-- nama lengkap -->
+            <label for="nama">Nama Lengkap:</label>
+            <input type="text" id="nama" name="nama" placeholder="Masukkan nama Anda" required>
+             <!--kelas  -->
+             <label for="kelas">Kelas:</label>
+             <input type="text" id="kelas" name="kelas" placeholder="Masukkan Kelas Anda">
+            <!-- alamat -->
+            <label for="alamat">Alamat:</label>
+            <input type="text" id="alamat" name="alamat" placeholder="Masukkan Alamat Anda" required>
+            <!-- nik -->
+            <label for="nik">NIK:</label>
+            <input type="text" id="nik" name="nik" maxlength="16" placeholder="Masukkan NIK Anda" required>
+             <!-- nomer telepon -->
+            <label for="telp">Nomor Telepon:</label>
+            <input type="tel" id="telp" name="telp" placeholder="Masukkan nomor telepon" required>
+            <!-- tanggal lahir -->
+            <label for="tgl_lahir">Tanggal Lahir:</label>
+            <input type="date" id="tgl_lahir" name="tgl_lahir" required>
+
+            <!-- <label for="tgl_pinjam">Tanggal Peminjaman:</label>
+            <input type="date" id="tgl_pinjam" name="tgl_pinjam" required>
+
+            <label for="tgl_kembali">Tanggal Pengembalian:</label>
+            <input type="date" id="tgl_kembali" name="tgl_kembali" required> -->
+
+            <!-- jenis sampah -->
+            <label for="jenissampah">Jenis sampah :</label>
+            <select id="jenissampah" name="jenissampah" required>
+                <option value="">Organik</option>
+                <option value="Tidak ada">Tidak ada</option>
+                <option value="Pisang">Pisang</option>
+                <option value="Apel">Apel</option>
+                <option value="Ikan">Ikan</option>
+                <option value="Kue">Kue</option>
+                <option value="Daun">Daun</option>
+                <option value="Keju">Keju</option>
+            </select>
+
+            <label for="jenissampah">Jenis sampah :</label>
+            <select id="jenissampah" name="jenissampah" required>
+                <option value="">Anorganik</option>
+                <option value="Tidak ada">Tidak ada </option>
+                <option value="Botol">Botol</option>
+                <option value="Meja">Meja</option>
+                <option value="Ban Bekas">Ban bekas</option>
+                <option value="Kaleng">Kaleng</option>
+                <option value="Battery">Battery</option>
+                <option value="Plastik">Plastik</option>
+            </select>
+
+            <!-- berat sampah -->
+            <label for="berat">Berat Sampah (KG) :</label>
+            <input 
+            type="number"
+            id="berat"
+            name="berat"
+            placeholder="Masukkan Berat Sampah"
+            min="1"
+            required
+            >
+
+            <br><br>
+            <button onclick="addData()">Submit</button>
+
+            <!-- <input type="submit" value="Submit"> -->
+        </form><br><br>
+        <br>
+    </div>
+    <br><br>
+    <br><br>
+    <br><br>
+    <div class="container2">
+        <form id="data">
+            <h3>Data Pengguna</h3>
+            <table border="1" id="userTable">
+                <thead>
+                    <tr>
+                        <th>Nama Lengkap:</th>
+                        <th>Kelas:</th>
+                        <th>Alamat</th>
+                        <th>Nik:</th>
+                        <th>Nomer Telepon:</th>
+                        <th>Tanggal Lahir:</th>
+                        <th>Jenis Sampah Organik:</th>
+                        <th>Jenis Sampah Anorganik:</th>
+                        <th>Berat Sampah (KG):</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody"></tbody>
+            </table>
+    
+    
+        </form>
+        
+    </div>
+
+    <!-- <script>
+        // Fungsi untuk menyimpan data ke localStorage saat form dikirim
+        document.getElementById('peminjamanForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Mencegah form refresh
+
+            // Mengambil nilai dari setiap input
+            const nama = document.getElementById('nama').value;
+            const kelas = document.getElementById('kelas').value;
+            const alamat = document.getElementById('alamat').value;
+            const nik = document.getElementById('nik').value;
+            const telp = document.getElementById('telp').value;
+            const tgl_lahir = document.getElementById('tgl_lahir').value;
+            // const tgl_pinjam = document.getElementById('tgl_pinjam').value;
+            // const tgl_kembali = document.getElementById('tgl_kembali').value;
+            const jenissampah = document.getElementById('jenissampah').value;
+            const berat = document.getElementById('berat').value;
+  
+            // Menyimpan data ke localStorage
+            localStorage.setItem('nama', nama);
+            localStorage.setItem('kelas', kelas);
+            localStorage.setItem('alamat', alamat);
+            localStorage.setItem('nik', nik);
+            localStorage.setItem('telp', telp);
+            localStorage.setItem('tgl_lahir', tgl_lahir);
+            // localStorage.setItem('tgl_pinjam', tgl_pinjam);
+            // localStorage.setItem('tgl_kembali', tgl_kembali);
+            localStorage.setItem('jenissampah', jenissampah);
+            localStorage.setItem('berat', berat);
+
+            // Arahkan ke halaman contoh => tampilkan.html
+            window.location.href = 'halaman_peminjam.html';
+        });
+    </script> -->
+
+    <script>
+        let users = [];
+        function addData(){
+             // Mengambil nilai dari setiap input
+            const nama = document.getElementById('nama').value;
+            const kelas = document.getElementById('kelas').value;
+            const alamat = document.getElementById('alamat').value;
+            const nik = document.getElementById('nik').value;
+            const telp = document.getElementById('telp').value;
+            const tgl_lahir = document.getElementById('tgl_lahir').value;
+            // const tgl_pinjam = document.getElementById('tgl_pinjam').value;
+            // const tgl_kembali = document.getElementById('tgl_kembali').value;
+            const jenissampah = document.getElementById('jenissampah').value;
+            const berat = document.getElementById('berat').value;
+        }
+
+        function displayData(){
+            const tableBody = document.getElementById("tableBody");
+            tableBody.innerHTML = "";
+
+            users.forEach((user, index) => {
+                tableBody.innerHTML += `
+                <tr>
+                    <td>${index + 1}</td>
+                    <td>${user.name}</td>
+                    <td>${user.email}</td>
+                    <td>${user.password}</td>
+                   <td>${user.lahir}</td>
+                   <td>${user.gender}</td>
+                   <td>${user.alamat}</td>
+                   <td>
+                      <button onclick="editData(${index})">Edit</button>
+                       <button onclick="deleteData(${index})">Hapus</button>
+                  </td>
+                </tr>
+                
+                `;
+            });
+        }
+        function editData(index) {
+            const nama = document.getElementById('nama').value = user.nama;
+            const kelas = document.getElementById('kelas').value = user.kelas;
+            const alamat = document.getElementById('alamat').value = user.alamat;
+            const nik = document.getElementById('nik').value = user.nik;
+            const telp = document.getElementById('telp').value = user.telp;
+            const tgl_lahir = document.getElementById('tgl_lahir').value = user.tgl_lahir;
+            // const tgl_pinjam = document.getElementById('tgl_pinjam').value;
+            // const tgl_kembali = document.getElementById('tgl_kembali').value;
+            const jenissampah = document.getElementById('jenissampah').value = user.jenissampah;
+            const berat = document.getElementById('berat').value = user.berat;
+
+            deleteData(index);
+                                                                      
+        }
+        function deleteData(index) {
+            users.splice(index, 1);
+            displayData();
+
+        }
+
+    </script>
+</body>
+</html>

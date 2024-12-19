@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Peminjaman</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50px;
+            margin: 10px;
+            margin-top: 250px;
+            padding: 50px;
+            padding-top: 100px;
+            padding-bottom: 500px;
+            background-image: url(/asset/backgroun.jpg);
+        }
+        .container {
+            background-color: white;
+            padding: 90px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 350px;
+        }
+        form{
+            width: 90%;
+            margin: 0 auto;
+        }
+        
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        p {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+        .btn-primary-peminjaman{
+        background:#1a54c0 ;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 10px;
+        box-shadow: none;
+        border: none;
+        text-decoration: none;
+        align-items: center;
+        font-weight: 200;
+        text-align: center;
+
+    }
+    .btn-primary-home{
+    background: #1a54c0;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: none;
+    border: none;
+    text-decoration: none;
+    align-items: center;
+    font-weight: 200;
+    text-align: center;
+
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form >
+        <h2>Detail Penjualan </h2>
+        <p><strong>Nama Lengkap:</strong> <span id="nama"></span></p>
+        <p><strong>Alamat:</strong> <span id="alamat"></span></p>
+        <p><strong>NIK:</strong> <span id="nik"></span></p>
+        <p><strong>Nomor Telepon:</strong> <span id="telp"></span></p>
+        <p><strong>Tanggal Lahir:</strong> <span id="tgl_lahir"></span></p>
+        <p><strong>Tanggal Peminjaman:</strong> <span id="tgl_pinjam"></span></p>
+        <p><strong>Tanggal Pengembalian:</strong> <span id="tgl_kembali"></span></p>
+        <p><strong>Mobil yang Dipilih:</strong> <span id="mobil"></span></p><br>
+            <a href="pembayaran.html" class="btn-primary-peminjaman">Ajukan Peminjaman</a><br>
+            <br><br>
+            <a href="formulir.html" class="btn-primary-home">Kembali halaman  sebelumnya</a><br><br>
+            <br>
+            <a href="../uuk.html" class="btn-primary-home">Home</a>
+                
+                
+        </form>
+    </div>
+
+    
+
+    <script>
+        // Mengambil data dari localStorage dan menampilkan di halaman
+        document.getElementById('nama').textContent = localStorage.getItem('nama');
+        document.getElementById('alamat').textContent = localStorage.getItem('alamat');
+        document.getElementById('nik').textContent = localStorage.getItem('nik');
+        document.getElementById('telp').textContent = localStorage.getItem('telp');
+        document.getElementById('tgl_lahir').textContent = localStorage.getItem('tgl_lahir');
+        document.getElementById('tgl_pinjam').textContent = localStorage.getItem('tgl_pinjam');
+        document.getElementById('tgl_kembali').textContent = localStorage.getItem('tgl_kembali');
+        document.getElementById('mobil').textContent = localStorage.getItem('mobil');
+    </script>
+   
+</body>
+</html>

@@ -1,0 +1,80 @@
+bayar.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konfirmasi Pembayaran</title>
+    <style>
+        body{
+            font-family: Arial,  sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            background-image: url(../aset/bglurus.jpeg);
+            background-size: cover;
+            background-attachment: fixed;
+            color: #333;
+        }
+        .container{
+            background-color: white;
+            padding: 20px;
+            margin: 20px auto;
+            width: 400px;
+            border-radius: 10px;
+            box-sizing: 0 2px 5px rgba(0,0,0,0.1);
+        }
+       button{
+        background-color: #1d5678;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        /* width: 100px; */
+       }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form >
+            <h2>Konfirmasi Pembayaran</h2>
+            <table>
+                <div id="userDetail"></div>
+                <button onclick="prosesPembayaran()">Proses Pembayaran</button>
+            </table> 
+        </form>
+    </div>
+
+    
+
+    <script>
+        function loadData() {
+            const userData = JSON.parse(localStorage.getItem("selectedUser"));
+            if (userData) {
+                const detailDiv = document.getElementById("userDetail");
+                detailDiv.innerHTML = `
+                    <p><strong>Nama:</strong> ${userData.nama}</p>
+                    <p><strong>Kelas:</strong> ${userData.kelas}</p>
+                    <p><strong>Alamat:</strong> ${userData.alamat}</p>
+                    <p><strong>NIK:</strong> ${userData.nik}</p>
+                    <p><strong>No. Telepon:</strong> ${userData.telp}</p>
+                    <p><strong>Tanggal Lahir:</strong> ${userData.tgl_lahir}</p>
+                    <p><strong>Jenis Sampah Organik:</strong> ${userData.jenisOrganik}</p> 
+                    <p><strong>Jenis Sampah Anorganik:</strong> ${userData.jenisAnorganik}</p>
+                    <p><strong>Berat (KG):</strong> ${userData.berat}</p>
+                `;
+            }
+        }
+
+        function prosesPembayaran() {
+            alert("Pembayaran berhasil diproses!");
+            localStorage.removeItem("selectedUser");
+            window.location.href = "selamat.html"; // Kembali ke halaman awal
+        }
+
+        loadData();
+    </script>
+</body>
+</html>
